@@ -1,3 +1,4 @@
+#making a cache matrix
 makeCacheMatrix<-function(x=matrix()){
   inv<-NULL
   set<-function(y){
@@ -10,6 +11,7 @@ makeCacheMatrix<-function(x=matrix()){
   list(set,get=get,setInverse=setInverse,getInverse=getInverse)
 }
 
+#caching inverse of a matrix
 cacheSolve<-function(x,...){
   inv<-x$getInverse()
   if ( !is.null (inv)){
